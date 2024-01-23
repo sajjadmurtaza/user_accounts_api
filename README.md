@@ -7,4 +7,40 @@ This Ruby application serves as a client for fetching user and account informati
 To run the Rails server, use the following command:
 
 ```bash
-rails server
+    rails server
+```
+
+## Using Postman
+
+1. Open Postman and create a new request.
+
+2. Set the request type to `GET``.
+
+3. Enter the following URL:
+
+    ```env
+    http://localhost:3000/api/v1/users/1
+    ```
+4. Send the request.
+
+5. Expected Outcome:
+
+```bash
+    {
+    "name": "Alice",
+    "account_list": [
+        {
+            "name": "A銀行",
+            "balance": 20000
+        },
+        {
+            "name": "C信用金庫",
+            "balance": 120000
+        },
+        {
+            "name": "E銀行",
+            "balance": 5000
+        }
+    ]
+}
+```
