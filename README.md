@@ -1,5 +1,7 @@
 # Accounts API Client
 
+https://www.loom.com/share/a3ac0037d8fa4d1fa31f2a9373b06108
+
 This Ruby application serves as a client for fetching user and account information from the  Accounts API.
 
 ## How to Run
