@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# spec/models/base_api_fetcher_spec.rb
-
 require 'rails_helper'
 require 'base_api_fetcher'
 

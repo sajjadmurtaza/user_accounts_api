@@ -48,3 +48,26 @@ To run the Rails server, use the following command:
     ]
 }
 ```
+
+
+## Services
+
+### 1. `UserAccountService`
+
+- **Description:** This service class is responsible for orchestrating the retrieval of user account information. It utilizes other service classes (`FetchUserData`, `FetchAccountsData`, and `FetchBalances`) to gather the necessary data and constructs a formatted response.
+
+### 2. `FetchUserData`
+
+- **Description:** This service class is dedicated to fetching user-specific data from the Sample Accounts API. It communicates with the API endpoint related to user information and extracts relevant details such as user name and account IDs.
+
+### 3. `FetchAccountsData`
+
+- **Description:** This service class focuses on fetching account data associated with a specific user. It communicates with the API endpoint responsible for retrieving account information and stores the data for further processing.
+
+### 4. `FetchBalances`
+
+- **Description:** This service class handles the retrieval of account balances. It takes the accounts data obtained from the `FetchAccountsData` service and makes additional API requests to gather balance information for each account.
+
+### 5. `BaseApiFetcher`
+
+- **Description:** This is a base class for fetching data from a remote API. It encapsulates common functionality for making API requests, handling responses, and logging errors. Subclasses, such as `FetchUserData`, `FetchAccountsData`, and `FetchBalances`, extend this base class to customize their specific API interactions.
