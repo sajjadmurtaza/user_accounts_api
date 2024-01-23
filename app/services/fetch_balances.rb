@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class FetchBalances
   BASE_URL = 'https://sample-accounts-api.herokuapp.com'
 
@@ -20,6 +22,7 @@ class FetchBalances
       account_id = account['attributes']['id']
       balance_response = RestClient.get("#{BASE_URL}/accounts/#{account_id}")
       balance_data = JSON.parse(balance_response.body)['attributes']
+
       balances << { name: balance_data['name'], balance: balance_data['balance'] }
     end
 

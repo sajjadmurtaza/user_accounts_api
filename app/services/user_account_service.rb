@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UserAccountService
   attr_accessor :user_id, :user_name, :account_ids, :accounts_data, :balances
 

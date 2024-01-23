@@ -1,24 +1,15 @@
-class FetchAccountsData
-  BASE_URL = 'https://sample-accounts-api.herokuapp.com'
+# frozen_string_literal: true
 
+class FetchAccountsData < BaseApiFetcher
   attr_accessor :user_id, :accounts_data
 
   def initialize(user_id:)
-    @user_id = user_id
-  end
-
-  def call
-    fetch_accounts_data
+    super("users/#{user_id}/accounts")
   end
 
   private
 
-  def fetch_accounts_data
-    accounts_data_response = RestClient.get("#{BASE_URL}/users/#{user_id}/accounts")
-    self.accounts_data = JSON.parse(accounts_data_response.body)
-    true
-  rescue RestClient::ExceptionWithResponse => e
-    Rails.logger.error("Failed to fetch accounts data: #{e.response}")
-    false
+  def handle_response
+    self.accounts_data = response_data
   end
 end

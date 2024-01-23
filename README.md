@@ -1,24 +1,10 @@
-# README
+# Accounts API Client
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This Ruby application serves as a client for fetching user and account information from the  Accounts API.
 
-Things you may want to cover:
+## How to Run
 
-* Ruby version
+To run the Rails server, use the following command:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+rails server
