@@ -4,6 +4,8 @@ This Ruby application serves as a client for fetching user and account informati
 
 ## How to Run
 
+ruby: 3.0.0
+
 To run the Rails server, use the following command:
 
 ```bash
