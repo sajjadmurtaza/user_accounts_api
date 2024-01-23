@@ -4,6 +4,26 @@ https://www.loom.com/share/a3ac0037d8fa4d1fa31f2a9373b06108
 
 This Ruby application serves as a client for fetching user and account information from the  Accounts API.
 
+
+## Setup
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/sajjadmurtaza/user_accounts_api.git
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    cd user_accounts_api
+    ```
+
+
+    ```bash
+    bundle install
+    ```
+
 ## How to Run
 
 ruby: 3.0.0
@@ -48,6 +68,24 @@ To run the Rails server, use the following command:
     ]
 }
 ```
+
+### Key files
+
+    
+    app
+    ├── controller                     
+    │      └── api/v1
+    │               └── users_controller
+    |
+    ├── services
+    |      ├── base_api_featurer
+    |      ├── featch_accounts_data
+    |      ├── fetch_balances
+    |      ├── fetch_user_data
+    |      └── user_account_service
+    |
+    │
+    └── spec
 
 
 ## Services
