@@ -43,8 +43,22 @@ To run the Rails server, use the following command:
 3. Enter the following URL:
 
     ```env
-    http://localhost:3000/api/v1/users/1
+        http://localhost:3000/api/v1/users/1
     ```
+
+    And don't forget to set request headers, for now it's hard-coded
+
+    ```env
+        'Authorization' == 'moneyForwardApiToken'
+    ```
+
+
+    which will in rails
+    ```bash
+    request.headers['Authorization'] == 'moneyForwardApiToken'
+    ```
+
+
 4. Send the request.
 
 5. Expected Outcome:
